@@ -12,3 +12,6 @@ class CustomUserAdmin(UserAdmin):
         "is_staff",
         "is_active",
     ]
+
+
+admin.site.register(CustomUser, CustomUserAdmin)
