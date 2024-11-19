@@ -48,3 +48,13 @@ class ReviewAssignment(models.Model):
 
     def __str__(self):
         return f"{self.reviewer.username} is reviewing {self.reviewee.username} in {self.review_cycle}"
+
+
+class Review(models.Model):
+    assignment = models.ForeignKey(ReviewAssignment, on_delete=models.CASCADE)
+    review_text = models.TextField()
+    score = models.DecimalField(max_digits=5, decimal_places=2)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Review by {self.assignment.reviewer.username} for {self.assignment.reviewee.username}"
