@@ -58,3 +58,20 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.assignment.reviewer.username} for {self.assignment.reviewee.username}"
+
+
+class LecturerGrade(models.Model):
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    graded_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        limit_choices_to={"role": "lecturer"},
+    )
+    grade = models.DecimalField(
+        max_digits=5, decimal_places=2
+    )  # can save from 999.99 to -999.99
+    comments = models.TextField()
+    graded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Grade for {self.review.assignment.reviewee.username} by {self.graded_by.username}"
