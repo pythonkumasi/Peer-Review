@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Local apps
     "accounts.apps.AccountsConfig",
     "courses.apps.CoursesConfig",
+    "reviews.apps.ReviewsConfig",
 ]
 
 MIDDLEWARE = [
