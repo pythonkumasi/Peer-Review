@@ -10,3 +10,4 @@ from .models import (
 # Register your models here.
 admin.site.register(ReviewCycle)
 admin.site.register(StudentEnrollment)
+admin.site.register(ReviewAssignment)
