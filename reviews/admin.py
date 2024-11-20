@@ -22,6 +22,9 @@ class LecturerGradeAdmin(admin.ModelAdmin):
 
     def get_review_cycle_name(self, obj):
         return obj.get_recycle_name()
+    
+    def get_reviewee_student_name(self, obj):
+        return obj.get_reviewee_student_name()
 
     get_review_cycle_name.short_description = "Review Cycle Name"
 
