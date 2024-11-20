@@ -74,5 +74,8 @@ class LecturerGrade(models.Model):
     comments = models.TextField()
     graded_at = models.DateTimeField(auto_now_add=True)
 
+    def get_recycle_name(self):
+        return self.review.assignment.review_cycle.name
+
     def __str__(self):
         return f"Grade for {self.review.assignment.reviewee.username} by {self.graded_by.username}"
