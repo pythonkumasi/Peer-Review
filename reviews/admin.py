@@ -18,15 +18,21 @@ class ReviewAssignmentAdmin(admin.ModelAdmin):
 
 
 class LecturerGradeAdmin(admin.ModelAdmin):
-    list_display = ["get_review_cycle_name", "graded_by", "grade"]
+    list_display = [
+        "get_review_cycle_name",
+        "get_reviewee_student_name",
+        "graded_by",
+        "grade",
+    ]
 
     def get_review_cycle_name(self, obj):
         return obj.get_recycle_name()
-    
+
     def get_reviewee_student_name(self, obj):
         return obj.get_reviewee_student_name()
 
     get_review_cycle_name.short_description = "Review Cycle Name"
+    get_reviewee_student_name.short_description = "Reviewee Student"
 
 
 admin.site.register(Review)
