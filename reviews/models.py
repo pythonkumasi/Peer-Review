@@ -15,6 +15,12 @@ class ReviewCycle(models.Model):
     is_active = models.BooleanField(default=False)
     # TODO: add a logic that makes is_active true when start_date - today is less than 1.
 
+    @property
+    def update_is_active(self):
+        today = timezone.now().date()
+        self.is_active = self.start_date <= today <= self.end_date
+        return self.is_active
+
     def __str__(self):
         return self.name
 
