@@ -4,13 +4,20 @@ from .models import CustomUser
 
 
 # Register your models here.
-class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin(admin.ModelAdmin):
     list_display = [
         "email",
         "username",
         "role",
         "is_staff",
         "is_active",
+    ]
+    fields = [
+        "email",
+        "username",
+        "role",
+        "is_staff",
+        "password",
     ]
 
 
