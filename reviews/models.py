@@ -77,5 +77,8 @@ class LecturerGrade(models.Model):
     def get_recycle_name(self):
         return self.review.assignment.review_cycle.name
 
+    def get_reviewee_student_name(self):
+        return self.review.assignment.reviewee
+
     def __str__(self):
         return f"Grade for {self.review.assignment.reviewee.username} by {self.graded_by.username}"
