@@ -58,7 +58,7 @@ class Review(models.Model):
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Review by {self.assignment.reviewer.username} for {self.assignment.reviewee.username}"
+        return f"{self.assignment.reviewer.username} reviewed for {self.assignment.reviewee.username} on {self.assignment.review_cycle.name}"
 
 
 class LecturerGrade(models.Model):
