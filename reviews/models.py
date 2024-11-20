@@ -47,7 +47,7 @@ class ReviewAssignment(models.Model):
     assignment_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.reviewer.username} is reviewing {self.reviewee.username} in {self.review_cycle}"
+        return f"{self.reviewer.username} is reviewing {self.reviewee.username} on {self.review_cycle}"
 
 
 class Review(models.Model):
