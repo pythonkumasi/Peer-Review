@@ -78,6 +78,10 @@ class LecturerGrade(models.Model):
         return self.review.assignment.review_cycle.name
 
     def get_reviewee_student_name(self):
+        """
+        Returns the student object who the assignment was assigned to.
+        This method retrieves the reviewee associated with the current review assignment.
+        """
         return self.review.assignment.reviewee
 
     def __str__(self):
