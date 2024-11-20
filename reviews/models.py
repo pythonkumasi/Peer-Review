@@ -16,6 +16,18 @@ class ReviewCycle(models.Model):
 
     @property
     def update_is_active(self):
+        """
+        Determines if the review cycle is currently active based on the date range.
+
+        This property checks if the current date is within the range defined by
+        the start_date and end_date of the review cycle. It sets the is_active
+        attribute to True if the current date is greater than or equal to
+        start_date and less than or equal to end_date; otherwise, it sets
+        is_active to False.
+
+        Returns:
+            bool: True if the review cycle is active, False otherwise.
+        """
         today = timezone.now().date()
         self.is_active = self.start_date <= today <= self.end_date
         return self.is_active
