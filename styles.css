@@ -54,7 +54,7 @@ body {
     box-shadow: 0 4px 8px 0 #F5F5F5;
 }
 
-form input {
+.search-bar form input {
     all: unset;
     height: 100%;
     width: 100%;
@@ -68,4 +68,20 @@ form input {
     height: 100%;
     width: 100%;
     border-radius: 30px;
+}
+/* content styles */
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+}
+
+.review-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.peer-info {
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
