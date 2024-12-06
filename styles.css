@@ -41,6 +41,7 @@ body {
     
 }
 
+/* upper-panel styling */
 .header-upper-panel {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -48,7 +49,7 @@ body {
 
 .search-bar form {
     width: 50%;
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     border-radius: 8px;
@@ -91,6 +92,7 @@ body {
     grid-template-rows: auto 1fr;
 }
 
+/* sidebar styling */
 .student-logo {
     background-color: rgb(110, 71, 218);
     display: flex;
@@ -114,3 +116,5 @@ body {
     align-items: center;
     align-self: self-start;
 }
+
+/* header greeting panel styles */
