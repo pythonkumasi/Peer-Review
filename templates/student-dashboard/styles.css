@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 80%;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1.5fr 4fr;
+    height: inherit;
+    padding: 20px 20px;
+    gap: 10px;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: auto 5fr;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    gap: 20px;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    background-image: linear-gradient(rgb(139, 109, 222), rgb(110, 71, 218));
+    border-radius: 30px;
+    justify-content: center;
+    padding: 30px;
+    width: 80%;
+    color: white;
+    
+}
+
+.content {
+    
+}
+
+/* upper-panel styling */
+.header-upper-panel {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: fit-content;
+}
+
+.search-bar form {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 #F5F5F5;
+}
+
+.search-bar form input {
+    all: unset;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+.user-profile-content ul {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile-content ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+li a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-decoration: none;
+    color: currentColor;
+    gap: 1rem;
+    
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-s {
+    height: 50px;
+    width: 50px;
+}
+
+.header-greeting-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient(to right, rgb(110, 71, 218), rgb(139, 109, 222));
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+/* content styles */
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+}
+
+.review-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.peer-info {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* sidebar styling */
+.student-logo {
+    background-color: rgb(110, 71, 218);
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.filter-white {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(359deg) brightness(102%) contrast(101%);
+}
+
+.b-icon {
+    height: 80%;
+    width: 80%;
+}
+
+.sidebar-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: self-start;
+}
+
+.nav-icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.sidebar li {
+    margin: 10px;
+}
+
+/* header greeting panel styles */
+.header-greeting-panel .text-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: space-between;
+    color: white;
+} 
+
+.header-greeting-panel > .image-section {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding-right: 40px;
+}
+img[src$="pngwing.com.png"] {
+    height: 250px;
+}
+
+/* styling for main content */
+.peers-profiles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+}
+.peers-profiles a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: currentColor;
+    justify-content: center;
+    align-items: center;
+}
+
+img[src*="avatar"] {
+    border: 2px solid rgb(110, 71, 218);
+    border-radius: 50px;
+}
+
+.past-reviews {
+    border: 4px solid rgb(110, 71, 218);
+    border-radius: 20px;
+
+}
+
+.past-reviews li {
+    list-style: "~ ";
+}
+
+.review-form {
+    border: 4px solid rgb(110, 71, 218);
+    height: 100%;
+    width: 100%;
+}
