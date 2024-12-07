@@ -31,12 +31,13 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
     background-image: linear-gradient(rgb(139, 109, 222), rgb(110, 71, 218));
     border-radius: 30px;
     justify-content: center;
     padding: 30px;
     width: 80%;
+    color: white;
     
 }
 
@@ -156,6 +157,32 @@ li a {
     align-self: self-start;
 }
 
+.nav-icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.sidebar li {
+    margin: 10px;
+}
+
 /* header greeting panel styles */
 .header-greeting-panel .text-section {
     display: flex;
@@ -199,10 +226,16 @@ img[src*="avatar"] {
 
 .past-reviews {
     border: 4px solid rgb(110, 71, 218);
-    border-radius: 30px;
-    
+    border-radius: 20px;
+
 }
 
 .past-reviews li {
     list-style: "~ ";
+}
+
+.review-form {
+    border: 4px solid rgb(110, 71, 218);
+    height: 100%;
+    width: 100%;
 }
